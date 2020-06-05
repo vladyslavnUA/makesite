@@ -10,7 +10,7 @@ _Create your own custom Static Site Generator (like [Jekyll](https://jekyllrb.co
 2. [Getting Started](#getting-started)
 3. [Deliverables](#deliverables)
 4. [Resources](#resources)
-
+ 
 ## Project Structure
 
 ```bash
