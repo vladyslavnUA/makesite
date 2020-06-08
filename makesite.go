@@ -1,11 +1,11 @@
 package main
 
-<<<<<<< HEAD
 import (
 	"io/ioutil"
 )
 
 func main() {
+	
 
 }
 
@@ -14,15 +14,24 @@ func readFile() string {
 	if err != nil {
 		panic(err)
 	}
-
 	return string(fileContents)
 }
 
-func renderTemplate()
-=======
-import "fmt"
+func renderTemplate() string {
+	paths := []string{
+		"template.tmpl",
+	  }
+	  
+	  template = "template.tmpl"
+	  t := template.Must(template.New("template.tmpl").ParseFiles(paths...))
+	//   contents := readFile()
 
-func main() {
-	fmt.Println("Hello, world!")
+	  err = t.Execute(os.Stdout, contents)
+	  bytesToWrite := []byte (buffer.String())
+	  if err != nil {
+		panic(err)
+	  }
+
+	return string(contents)
+
 }
->>>>>>> 9514ac8a2c135a448a2b15a4b246dcd5d59ee7bf
