@@ -1,0 +1,44 @@
+package main
+
+import (
+	"os"
+	"io/ioutil"
+	"html/template"
+	"flag"
+)
+
+func main() {
+	t := template.Must(template.New("template.tmpl").ParseFiles("new.html"))
+
+}
+
+func readFile() string {
+	var filename []string
+	fileContents, err := ioutil.ReadFile(filename)
+	if err != nil {
+		panic(err)
+	}
+	return string(fileContents)
+}
+
+func renderTemplate() string {
+	// paths := []string{
+	// 	"template.tmpl",
+	//   }
+	// var buffer bytes.Buffer
+	theseBytes := new(bytes.Buffer)
+
+	//   template = "template.tmpl"
+	t := template.Must(template.New("template.tmpl").ParseFiles("new.html"))
+	// contents := readFile()
+	err = t.Execute(os.Stdout, contents)
+
+	// err = t.Execute(os.Stdout, contents)
+	bytesToWrite := []byte (theseBytes.Bytes())
+	if err != nil {
+		panic(err)
+	}
+ 
+	return string(contents)
+
+}
