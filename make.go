@@ -47,7 +47,7 @@ func save() {
 	// var content string
 	
 	// FLAGS
-	filename := flag.String("file", "", " the name of your .txt file")
+	filename := flag.String("file", "", " latest-post.txt")
 	flag.Parse()
 	fmt.Println("file: ", *filename)
 
